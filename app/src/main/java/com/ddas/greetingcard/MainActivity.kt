@@ -35,6 +35,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -64,14 +65,13 @@ class MainActivity : ComponentActivity() {
 @Composable
 
 fun Greeting(modifier: Modifier = Modifier) {
-    var showPopup by remember {mutableStateOf(false)}
 
     Surface (color = Color.DarkGray,
         modifier = modifier
             .fillMaxSize()){
 
 
-Column(verticalArrangement = Arrangement.Center,
+Column(verticalArrangement = Arrangement.Top,
     horizontalAlignment = Alignment.CenterHorizontally,
     modifier = modifier
         .padding(24.dp)) {
@@ -83,30 +83,22 @@ Column(verticalArrangement = Arrangement.Center,
         textAlign = TextAlign.Center,
         fontWeight = FontWeight.Bold,
         fontSize = 38.sp,
+        modifier = modifier
+            .padding(top = 200.dp)
         )
 
 
-//    var text by remember { mutableStateOf("") }
-//    OutlinedTextField(
-//        value = text,
-//        onValueChange = { text = it },
-//        label = {
-//            Text(
-//                "Enter Your Name",
-//                color = Color.White
-//            )
-//        },
-//        modifier = modifier
-//            .padding(top = 240.dp, start = 24.dp, end = 24.dp, bottom = 550.dp)
-//
-//    )
-//
-//    Button(modifier = modifier
-//        .padding(top = 350.dp, start = 20.dp, end = 20.dp, bottom = 450.dp),
-//        shape = RectangleShape, onClick = { showPopup = true }) {
-//        Text(text = "Enter")
-//    }
-}
+
+    Button(onClick = { /*TODO*/ }) {
+        Text(text = "Enter")
+        
+    }
+
+
+
+
+
+        }
     }
 }
 
